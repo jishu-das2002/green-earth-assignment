@@ -46,9 +46,131 @@
 /* navbar section end */
 /* banner section start */
 
-.banner-section{
+.banner-section {
     background: rgba(207, 240, 220, 1);
     text-align: center;
+    width: 100%;
+    height: 383px;
+    background-image: url(./assets/hero-leaf1.png), url(./assets/hero-leaf2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom;
+    margin: 0;
 }
 
 
+/* bannner section end */
+/* card section start */
+
+.card-section{
+    width: 1650px;
+    margin: 0 auto;
+}
+
+.card-section-heading{
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    gap: 20px;             
+    align-items: flex-start; 
+}
+
+.Categories-section-title{
+    color: rgba(0, 0, 0, 1);
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.all-trees ul{ 
+    list-style: none;
+    padding: 0;
+}
+
+.all-trees li{
+    padding-top: 16px;
+    width: 250px;
+    height: 35px;
+}
+
+.all-trees li a{
+    text-decoration: none;
+    color: rgba(31, 41, 55, 1);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 10px 8px 10px;
+}
+
+.all-trees li:hover{
+    border-radius: 4px;
+    background: rgba(21, 128, 61, 1);
+}
+
+.all-trees li a:hover{
+    color:rgba(255, 255, 255, 1);
+}
+
+#categories-container ul{
+    list-style: none;
+    padding: 0;
+}
+
+#categories-container li{
+    padding-top: 16px;
+    width: 250px;
+    height: 35px;
+}
+
+#categories-container li a{
+    text-decoration: none;
+    color: rgba(31, 41, 55, 1);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+     padding: 8px 10px 8px 10px;
+}
+
+
+#categories-container li:hover{
+    border-radius: 4px;
+    background: rgba(21, 128, 61, 1);
+}
+
+#categories-container li a:hover{
+    color:rgba(255, 255, 255, 1);
+}
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.plant-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    background: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    width: 343.33px;
+    height: 369px;
+}
+
+.plant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.category{
+    width: 86px;
+    height: 28px;
+    border-radius: 400px;
+    background: rgba(220, 252, 231, 1);
+}

@@ -30,16 +30,105 @@
 
         <!-- banner section start -->
 
-        <section class="banner-section hide">
+        <section class="banner-section">
             <h2>Plant a Tree, Grow a Future</h2>
             <p>Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
             <button class="primary-btn">Get Involved</button>
         </section>
 
         <!-- banner section end -->
-         
+        <!-- Categories , Choose Your Trees and cart section start -->
+
+        <section class="card-section">
+            <h4 class="card-section-heading">Choose Your Trees</h4>
+            
+            <div class="flex">
+                <div class="Categories-section">
+                    <h3 class="Categories-section-title">Categories</h3>
+                    <div class="all-trees">
+                        <ul>
+                            <li>
+                                <a href="">All Trees</a>
+                            </li>
+                        </ul>
+                    </div>
+                <div id="categories-container"></div>
+                </div>
+            
+                <div id="card-container"></div>
+
+                <div id="your-cart">
+                    <h3>Your Cart</h3>
+                    <ul id="cart-items" style="list-style:none; padding:0; margin:0;"></ul>
+                    <p id="cart-total" style="font-weight:bold; margin-top:10px;">Total: ৳0</p>
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+        <!-- Categories , Choose Your Trees and cart section end  -->
+        <!-- about section start  -->
+
+        <section class="hide">
+            <h3>About the Campaign</h3>
+            <div>
+                <img src="/assets/about.png" alt="">
+               <div>
+                 <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>
+                 <ul>
+                    <li>Restoration of natural habitats </li>
+                    <li>Improvement of air quality</li>
+                    <li>Support for local communities</li>
+                 </ul>
+               </div>
+            </div>
+        </section>
+        <!-- about section end -->
+        <!-- our impact section start -->
+
+        <section>
+            <h1>Our Impact</h1>
+            <div>
+                <div>
+                    <h6>500K+</h6>
+                    <p>Trees Planted</p>
+                </div>
+                <div>
+                    <h6>120+</h6>
+                    <p>Communities Involved</p>
+                </div>
+                <div>
+                    <h6>30+</h6>
+                    <p>Countries Reached</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- our impact section end -->
+        <!-- Plant a Tree Today section start-->
+
+        <section>
+            <input type="text"  placeholder="Your Name" required>
+            <input type="text"  placeholder="Your Email Address">
+            <input type="number" placeholder="Number of Trees">
+        <select id="trees" required>
+        </select>
+        </section>
+
+        <!-- plant a Tree Today section end -->
     </main>
     <!-- main section end -->
+    <!-- footer section start -->
+     <section>
+        <p>© 2025 Green Earth. All Rights Reserved.</p>
+     </section>
+
+    <!-- footer section end -->
+    <!-- add java script file -->
+
+
+    <script src="./index.js"></script>
 </body>
 </html>
 
