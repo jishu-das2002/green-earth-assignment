@@ -14,7 +14,7 @@ const displayCategories = (treeCategories) => {
 
     for (let treeCategorie of treeCategories) {
         const li = document.createElement("li");
-        li.innerHTML = `<a href="#">${treeCategorie.category_name}</a>`;
+        li.innerHTML = `<a class="inter-font" href="#">${treeCategorie.category_name}</a>`;
         ul.appendChild(li);
     }
 
@@ -42,13 +42,13 @@ const displayPlants = (plants) => {
 
         div.innerHTML = `
             <img src="${plant.image}" alt="${plant.name}" style="width:100%; height:200px; object-fit:cover; border-radius:8px;"/>
-            <h3>${plant.name}</h3>
-            <p style="font-size:14px; color:#555; margin:5px 0;">${plant.description.slice(0, 100)}...</p>
+            <h3 class="inter-font" style="font-size: 14px;">${plant.name}</h3>
+            <p style="font-size:14px; color:#555; margin:5px 0;" class="inter-font; width: 311.33px; height: 32px;">${plant.description.slice(0, 100)}...</p>
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                <span style="font-weight:600;">${plant.category}</span>
-                <span style="font-weight:600;">৳${plant.price}</span>
+                <span style="font-size: 14px; font-weight: 400; color: rgba(21, 128, 61, 1);  border-radius: 400px; background: rgba(220, 252, 231, 1); width: 140px; height: 28px;" class="inter-font">${plant.category}</span>
+                <span style="font-weight:600;" class="inter-font">৳${plant.price}</span>
             </div>
-            <button class="add-cart-btn" style="width:100%; padding:10px; background:green; color:white; border:none; border-radius:5px; cursor:pointer;">Add to Cart</button>
+            <button class="add-cart-btn inter-font" style="width:100%; padding:10px; background:green; color:white; border:none; border-radius:999px; cursor:pointer;">Add to Cart</button>
         `;
 
         div.querySelector(".add-cart-btn").addEventListener("click", () => {
@@ -83,21 +83,21 @@ function updateCart() {
 
     cart.forEach((item, index) => {
         const li = document.createElement("li");
-        li.style.display = "flex";
-        li.style.justifyContent = "space-between";
         li.style.marginBottom = "5px";
 
         li.innerHTML = `
-            <span>${item.category} - ৳${item.price}</span>
-            <button style="background:red; color:white; border:none; border-radius:4px; cursor:pointer;">Remove</button>
-        `;
+            <div style="display:flex; justify-content: space-between; align-items:center; width:100%;">
+            <span>${item.category} -<br> ৳${item.price}</span>
+            <button style="  color: black; border:none; border-radius:4px; cursor:pointer;">✖</button>
+            </div>
+            `;
 
-        // Remove button
         li.querySelector("button").addEventListener("click", () => {
-            total -= item.price;
-            cart.splice(index, 1);
-            updateCart();
+        total -= item.price;
+        cart.splice(index, 1);
+        updateCart();
         });
+
 
         cartItems.appendChild(li);
     });
@@ -105,17 +105,3 @@ function updateCart() {
     cartTotal.textContent = `Total: ৳${total}`;
 }
 
-
-// categoris sectiona ar api
-
-const loadCategory = (id) => {
-  fetch(`https://openapi.programming-hero.com/api/category/${id}`)
-    .then(res => res.json())
-    .then(data => {
-      console.log(data); // এখানে API থেকে যা আসবে তা console এ দেখাবে
-    })
-    .catch(err => console.error("Error:", err));
-}
-
-// ফাংশন কল করার সময় একটা id দিতে হবে
-loadCategory(1);
