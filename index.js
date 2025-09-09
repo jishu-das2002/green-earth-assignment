@@ -64,3 +64,58 @@ loadPlants();
 
 
 
+const cart = [];
+let total = 0;
+
+
+function addToCart(category, price) {
+    cart.push({ category, price });
+    total += price;
+    updateCart();
+}
+
+
+function updateCart() {
+    const cartItems = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+
+    cartItems.innerHTML = "";
+
+    cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.style.display = "flex";
+        li.style.justifyContent = "space-between";
+        li.style.marginBottom = "5px";
+
+        li.innerHTML = `
+            <span>${item.category} - ৳${item.price}</span>
+            <button style="background:red; color:white; border:none; border-radius:4px; cursor:pointer;">Remove</button>
+        `;
+
+        // Remove button
+        li.querySelector("button").addEventListener("click", () => {
+            total -= item.price;
+            cart.splice(index, 1);
+            updateCart();
+        });
+
+        cartItems.appendChild(li);
+    });
+
+    cartTotal.textContent = `Total: ৳${total}`;
+}
+
+
+// categoris sectiona ar api
+
+const loadCategory = (id) => {
+  fetch(`https://openapi.programming-hero.com/api/category/${id}`)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data); // এখানে API থেকে যা আসবে তা console এ দেখাবে
+    })
+    .catch(err => console.error("Error:", err));
+}
+
+// ফাংশন কল করার সময় একটা id দিতে হবে
+loadCategory(1);

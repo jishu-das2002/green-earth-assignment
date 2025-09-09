@@ -1,4 +1,11 @@
 
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
 /* navbar section start */
 
 .nav-section{
@@ -41,6 +48,7 @@
     background-color: rgba(250, 204, 21, 1);
     border: 0;
     border-radius: 999px;
+    color: rgba(21, 128, 61, 1);
 }
 
 /* navbar section end */
@@ -174,3 +182,79 @@
     border-radius: 400px;
     background: rgba(220, 252, 231, 1);
 }
+
+/* Plant a Tree Today section start*/
+
+.Plant-a-Tree-Today{
+    background: rgba(22, 101, 52, 1);
+    width: 100%;
+    height: 591px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Plant-a-Tree-Today-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 391px;
+}
+
+.Plant-a-Tree-Today-section h3{
+    color: rgba(255, 255, 255, 1);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.Plant-a-Tree-Today-from{
+    border-radius: 12px;
+    box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.06);
+    background: rgba(21, 128, 61, 1);
+    width: 650px;
+    height: 311px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.Plant-a-Tree-Today-from input{
+    width: 570px;
+    height: 39px;
+    margin-top: 12px;
+    padding-left: 12px;
+    box-sizing: border-box;
+    border: 1px solid rgba(228, 228, 231, 1);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 1);    
+}
+
+.input-btn{
+    margin-top: 20px;
+    width: 570px;
+    height: 43px;
+}
+
+/* Plant a Tree Today section end */
+/* footer section start */
+
+.footer-section{
+    background-color: rgba(20, 83, 45, 1);
+    width: 100%;
+    height: 72px;
+}
+
+.footer-section p{
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 24px;
+    margin: 0;
+}
+
+/* footer section end */
