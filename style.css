@@ -7,6 +7,9 @@
 
 
 /* navbar section start */
+header{
+    width: 1920px;
+}
 
 .nav-section{
     display: flex;
@@ -14,6 +17,7 @@
     align-items: center;
     padding: 24px 135px 24px 135px;
     background:  rgba(21, 128, 61, 1);
+    width: 1655px;
 }
 
 .nav-title{
@@ -57,7 +61,7 @@
 .banner-section {
     background: rgba(207, 240, 220, 1);
     text-align: center;
-    width: 100%;
+    width: 1920px;
     height: 383px;
     background-size: 546px 383px;
     background-image: url(./assets/hero-leaf1.png), url(./assets/hero-leaf2.png);
@@ -85,6 +89,7 @@
 
 .bg-color{
     background-color: rgba(220, 252, 231, 1);
+    width: 1920px;
 }
 
 .card-section{
@@ -105,7 +110,8 @@
 .flex {
     display: flex;
     gap: 20px;             
-    align-items: flex-start; 
+    align-items: flex-start;
+    width: 1920px;
 }
 
 .Categories-section-title{
@@ -210,6 +216,11 @@
 }
 
 /* About section start */
+
+.about-section{
+    width: 1920px;
+}
+
 .about-section h3{
     text-align: center;
     margin-top: 100px;
@@ -244,7 +255,7 @@
 /* our impact section start */
 
 .our-impact-section{
-    width: 100%;
+    width: 1920px;
     height: 436px;
     background: rgba(207, 240, 220, 1);
     display: flex;
@@ -292,7 +303,7 @@
 
 .Plant-a-Tree-Today{
     background: rgba(22, 101, 52, 1);
-    width: 100%;
+    width: 1920px;
     height: 591px;
     display: flex;
     justify-content: center;
@@ -349,7 +360,7 @@
 
 .footer-section{
     background-color: rgba(20, 83, 45, 1);
-    width: 100%;
+    width: 1920px;
     height: 72px;
 }
 
@@ -363,3 +374,179 @@
 }
 
 /* footer section end */
+
+
+/* Responsive CSS for screens <= 576px */
+  @media screen and (max-width: 576px) {
+
+    .hide{
+        display: none;
+    }
+
+    header{
+        max-width: 100%;
+    }
+
+
+    .nav-section {
+        flex-direction: column;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .nav-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .nav-section ul {
+        flex-direction: row;
+        gap: 10px;
+        max-width: 100%;
+        text-align: center;
+    } 
+
+    /* Banner Section */
+    .banner-section {
+        height: auto;
+        background-size: contain;
+        background-position: center;
+        background-image: none;
+        max-width: 100%;
+    }
+
+    .banner-section h2 {
+        font-size: 32px;
+        padding-top: 0;
+        max-width: 100%;
+    }
+
+    .banner-section p {
+        max-width: 100%;
+        font-size: 14px;
+        margin: 12px auto 20px auto;
+    }
+
+    .primary-btn {
+        width: 100%;
+        max-width: 200px;
+    } 
+
+    /* Card Section */
+     .flex {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .bg-color{
+        max-width: 100%;
+    }
+
+    .card-section{
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .card-section-heading{
+        max-width: 100%;
+        padding-top: 35px;
+    }
+
+    #card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width:100%;
+    }
+
+    .plant-card {
+        max-width: 90%;
+        height: auto;
+    } 
+
+    /* Categories Section */
+
+    .about-section{
+        max-width: 100%;
+    }
+
+     .all-trees li, #categories-container li {
+        width: 100%;
+        height: auto;
+    }
+
+    /* About Section */
+     .about-img-text {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    } 
+
+    .about-img-text img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto 20px auto;
+    }
+
+    .about-img-text p {
+        margin-top: 16px;
+        max-width: 100%;
+    }
+
+    /* Our Impact Section */
+
+    .our-impact-section{
+        max-width: 100%;
+    }
+
+     .reviews {
+        gap: 16px;
+        align-items: center;
+        max-width: 80%;
+        flex-direction: column;
+    }
+
+    .review {
+        max-width: 50%;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .review h6{
+        font-size: 25px;
+    }
+
+    /* Plant a Tree Today Section */
+
+    .Plant-a-Tree-Today{
+        max-width: 100%;
+    }
+
+     .Plant-a-Tree-Today-section {
+        max-width: 100%;
+        height: auto;
+    } 
+
+     .Plant-a-Tree-Today-from {
+        max-width: 95%
+    } 
+
+    .Plant-a-Tree-Today-from input{
+        max-width:100%;
+    }
+
+    /* .Plant-a-Tree-Today-from input, */
+    .input-btn {
+        max-width: 395px;
+    } 
+
+    /* Footer */
+    .footer-section { 
+        height: auto; 
+        padding: 16px 0;
+        max-width: 100%;
+    }  
+ } 

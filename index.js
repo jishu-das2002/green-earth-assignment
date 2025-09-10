@@ -105,3 +105,10 @@ function updateCart() {
     cartTotal.textContent = `Total: ৳${total}`;
 }
 
+
+
+const loadfrut= () => {
+    fetch("https://openapi.programming-hero.com/api/category/1")
+    .then(res => res.json())
+    .then(api => console.log(api));
+}
